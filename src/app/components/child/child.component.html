@@ -1,0 +1,12 @@
+<div class="child">
+  <h3>{{ description }}</h3>
+  <p><b>Counter Name:</b> {{ name }}</p>
+  <input
+    *ngIf="flag"
+    type="text"
+    (input)="onInputChange($event)"
+    placeholder="Name"
+  />
+  <p><b>Counter Value:</b> {{ counterValue }}</p>
+  <button class="btn" (click)="increment()">Counter + {{ stepCounter }}</button>
+</div>

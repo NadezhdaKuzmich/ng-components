@@ -1,0 +1,18 @@
+<section>
+  <div class="parent">
+    <div>
+      <h2>{{ parentName }}</h2>
+      <p><b>Parent Counter:</b> {{ parentCounter }}</p>
+    </div>
+    <app-child
+      description="Child Component with props from {{ parentName }}"
+      [name]="parentName"
+      [counterValue]="startCount"
+      [step]="parentStepValue"
+      (inputChange)="handleInputChange($event)"
+      (counterChange)="handleChildCounterChange($event)"
+      [flag]="true"
+    />
+    <app-child></app-child>
+  </div>
+</section>

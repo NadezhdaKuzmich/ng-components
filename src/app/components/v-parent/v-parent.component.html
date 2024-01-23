@@ -1,0 +1,9 @@
+<section>
+  <div class="parent">
+    <h2>Parent Component</h2>
+    <app-v-child #child></app-v-child>
+    <button class="btn" (click)="child.changeColor()">
+      Change color from Parent Component
+    </button>
+  </div>
+</section>
