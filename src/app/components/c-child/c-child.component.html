@@ -1,7 +1,11 @@
 <div class="child">
-  <div>
-    <h3>Child Component</h3>
-    <ng-content></ng-content>
-    <button class="btn" *ngIf="flag" (click)="changeText()">Change text</button>
+  <h3>Child Component</h3>
+  <button class="btn" *ngIf="flag" (click)="changeText()">Change text</button>
+  <div *ngIf="!flag">
+    <button class="btn" (click)="changeGrandChildColor()">
+      Change color with
+    </button>
+    <p>Do changes with ContentChildren</p>
   </div>
+  <ng-content></ng-content>
 </div>

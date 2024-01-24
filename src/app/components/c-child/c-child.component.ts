@@ -1,4 +1,12 @@
-import { Component, Input, ContentChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  Input,
+  ContentChild,
+  ElementRef,
+  ContentChildren,
+  QueryList,
+} from '@angular/core';
+import { CGrandChildComponent } from '../c-grand-child/c-grand-child.component';
 
 @Component({
   selector: 'app-c-child',
@@ -7,12 +15,19 @@ import { Component, Input, ContentChild, ElementRef } from '@angular/core';
 })
 export class CChildComponent {
   @Input() flag = false;
-  
+
   @ContentChild('elem') elem: ElementRef | undefined;
+  @ContentChildren(CGrandChildComponent) grandChild:
+    | QueryList<CGrandChildComponent>
+    | undefined;
 
   changeText() {
     if (this.elem) {
-      this.elem.nativeElement.innerHTML = 'Changed from Content Child';
+      this.elem.nativeElement.innerHTML = 'Changed from ContentChild';
     }
+  }
+
+  changeGrandChildColor() {
+    this.grandChild?.forEach(el => el.changeColor())
   }
 }
