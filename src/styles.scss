@@ -21,6 +21,31 @@ section {
   gap: 20px;
 }
 
+.parent {
+  border-radius: 8px;
+  border: 2px solid #8bb3d6;
+  padding: 0 20px 20px;
+}
+
+.child {
+  border-radius: 8px;
+  border: 2px solid #9aaddb;
+  padding: 20px;
+}
+
+.gandchild {
+  border-radius: 8px;
+  border: 2px solid #b2c0e2;
+  padding: 20px;
+}
+
+input {
+  width: 280px;
+  border-radius: 8px;
+  border: 2px solid #576ead;
+  padding: 8px 10px;
+}
+
 .btn {
   font-weight: 600;
   color: #fafcff;
@@ -37,10 +62,4 @@ section {
 
 hr {
   border: 1px solid #b7c6ef;
-}
-
-.parent {
-  border-radius: 8px;
-  border: 2px solid #8bb3d6;
-  padding: 0 20px 20px;
 }

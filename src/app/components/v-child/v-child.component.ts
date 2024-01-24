@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './v-child.component.scss',
 })
 export class VChildComponent {
-  isGreen = false;
+  isPurple = false;
 
   changeColor() {
-    this.isGreen = !this.isGreen;
+    this.isPurple = !this.isPurple;
   }
 }

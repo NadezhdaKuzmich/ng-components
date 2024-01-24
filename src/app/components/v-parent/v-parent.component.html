@@ -2,8 +2,24 @@
   <div class="parent">
     <h2>Parent Component</h2>
     <app-v-child #child></app-v-child>
-    <button class="btn" (click)="child.changeColor()">
-      Change color from Parent Component
-    </button>
+    <div class="btns-box">
+      <button class="btn" (click)="child.changeColor()">
+        Change color from Parent Component
+      </button>
+      <button class="btn" (click)="changeChildColor()">
+        Change color by ViewChild
+      </button>
+    </div>
+  </div>
+</section>
+<section class="parent">
+  <h2>View Child</h2>
+  <div>
+    <div class="input-change">
+      <input type="text" #parentInput placeholder="Change text" />
+      <button class="btn" (click)="updateText()">Change Text</button>
+      <button class="btn" (click)="takeFocus()">Take Focus</button>
+    </div>
+    <p>{{ currentText }}</p>
   </div>
 </section>
