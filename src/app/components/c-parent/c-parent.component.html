@@ -1,6 +1,12 @@
-<section>
-  <div class="parent">
-    <h2>Parent Component</h2>
-    <app-c-child></app-c-child>
-  </div>
+<section class="parent">
+  <h2>Parent Component</h2>
+  <app-c-child [flag]="true">
+    <p #elem>{{ parentText }}</p>
+  </app-c-child>
+  <app-c-child>
+    <app-c-grand-child></app-c-grand-child>
+    <app-c-grand-child></app-c-grand-child>
+    <app-c-grand-child></app-c-grand-child>
+    <app-c-grand-child></app-c-grand-child>
+  </app-c-child>
 </section>

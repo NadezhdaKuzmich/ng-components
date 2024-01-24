@@ -1,4 +1,7 @@
-<div class="div child">
-  <h3>Child Component</h3>
-  <app-c-grand-child></app-c-grand-child>
+<div class="child">
+  <div>
+    <h3>Child Component</h3>
+    <ng-content></ng-content>
+    <button class="btn" *ngIf="flag" (click)="changeText()">Change text</button>
+  </div>
 </div>
